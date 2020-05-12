@@ -22,3 +22,7 @@ If you have nothing set then you can have `interval=once` and full_text is not
 needed
 
 `command` is just the path to the script.
+
+## Possible updates
+
+Use swaylock config and swayidle config
