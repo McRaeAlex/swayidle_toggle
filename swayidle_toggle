@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# The goal is to toggle the swayidle program. We could do it by getting an
+# env variable to set it too
+settings = env["SWAYIDLE_SETTINGS"]
+
+# if active stop it
+if [pgrep swayidle > /dev/null]
+then
+    pkill swayidle
+    echo "DISABLED"
+else
+    swaymsg "exec swayidle -w ${settings}"
+    echo "ACTIVE"
+fi
+# else start it again
+
